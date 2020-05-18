@@ -82,7 +82,7 @@ class AlertDemo extends StatelessWidget {
                 color: Colors.green,
                 shape: BoxShape.circle,
               ),
-              child: Center(child:Text('完全自定义,其实showDialog方法就是push一个定制的路由，而路由就是一层Overlay组件')),
+              child: Center(child:Text('完全自定义,放啥都行')),
             ),
             shape: CircleBorder(),
           );
@@ -99,6 +99,10 @@ class AlertDemo extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
+            Container(
+              padding: EdgeInsets.all(10),
+              child: Text('showDialog方法本质上就是通过Navigator.of(context).push一个定制的路由，而路由就是一层Overlay组件'),
+            ),
             RaisedButton(
                 onPressed: () => this.baseAlert(context),
                 child: Text('AlertDialog')),
